@@ -7,7 +7,7 @@
 首先，安装 [ESLint](http://eslint.org) 和 `eslint-plugin-xyz`:
 
 ```bash
-npm install eslint eslint-plugin-xyz --save-dev
+npm install --save-dev eslint eslint-plugin-xyz
 ```
 
 **注意:** 如果你全局安装了`eslint` (使用 `-g` 参数) 那么也必须全局安装 `eslint-plugin-xyz`.
@@ -34,6 +34,10 @@ npm install eslint eslint-plugin-xyz --save-dev
 }
 ```
 
+```bash
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+```
+
 `vue3`项目的使用:
 
 ```json
@@ -43,6 +47,10 @@ npm install eslint eslint-plugin-xyz --save-dev
 }
 ```
 
+```bash
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+```
+
 `react`项目的使用:
 
 ```json
@@ -50,6 +58,10 @@ npm install eslint eslint-plugin-xyz --save-dev
   "plugins": ["xyz"],
   "extends": ["plugin:xyz/react"]
 }
+```
+
+```bash
+npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
 ```
 
 `node`项目的使用:

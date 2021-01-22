@@ -9,7 +9,7 @@ A general eslint plugin with [prettier](https://prettier.io/). It can help you u
 install [ESLint](http://eslint.org) and `eslint-plugin-xyz`:
 
 ```bash
-npm install eslint eslint-plugin-xyz --save-dev
+npm install --save-dev eslint eslint-plugin-xyz
 ```
 
 **Note:** you must install `eslint-plugin-xyz` globally, If you install `eslint` globally (using the `-g` parameter).
@@ -34,6 +34,10 @@ for `vue` project: ()
 }
 ```
 
+```bash
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+```
+
 for `vue3` project: ()
 
 ```json
@@ -43,6 +47,10 @@ for `vue3` project: ()
 }
 ```
 
+```bash
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+```
+
 for `react` project:
 
 ```json
@@ -50,6 +58,10 @@ for `react` project:
   "plugins": ["xyz"],
   "extends": ["plugin:xyz/react"]
 }
+```
+
+```bash
+npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
 ```
 
 for `node` project:
