@@ -1,37 +1,31 @@
 # eslint-plugin-xyz
 
-序言泽前端代码规则（结合 `eslint` 和 [prettier](https://prettier.io/)），主要使用了 `eslint` 和 `prettier` 推荐的默认规则，加极少量的自定义规则。
+A general eslint plugin with [prettier](https://prettier.io/). It can help you unify the code style and can be used in `common`, `node`, `vue`, `react` project.
 
-## 安装
+[简体中文文档](./README.cn.md)
 
-首先，安装 [ESLint](http://eslint.org):
+## install
 
-```bash
-npm i eslint --save-dev
-```
-
-然后，安装 `eslint-plugin-xyz`:
+install [ESLint](http://eslint.org) and `eslint-plugin-xyz`:
 
 ```bash
-npm install eslint-plugin-xyz --save-dev
+npm install eslint eslint-plugin-xyz --save-dev
 ```
 
-**注意:** 如果你全局安装了`eslint` (使用 `-g` 参数) 那么也必须全局安装 `eslint-plugin-xyz`.
+**Note:** you must install `eslint-plugin-xyz` globally, If you install `eslint` globally (using the `-g` parameter).
 
-## 使用
+## usage
 
-将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
-
-一般项目（如`shfe-cli`脚手架项目）的使用：:
+for `common` project:
 
 ```json
 {
   "plugins": ["xyz"],
-  "extends": ["plugin:xyz/recommended"]
+  "extends": ["plugin:xyz/common"]
 }
 ```
 
-`vue`项目的使用:
+for `vue` project: ()
 
 ```json
 {
@@ -40,7 +34,16 @@ npm install eslint-plugin-xyz --save-dev
 }
 ```
 
-`react`项目的使用:
+for `vue3` project: ()
+
+```json
+{
+  "plugins": ["xyz"],
+  "extends": ["plugin:xyz/vue3"]
+}
+```
+
+for `react` project:
 
 ```json
 {
@@ -49,7 +52,7 @@ npm install eslint-plugin-xyz --save-dev
 }
 ```
 
-`node`项目的使用:
+for `node` project:
 
 ```json
 {
@@ -58,9 +61,15 @@ npm install eslint-plugin-xyz --save-dev
 }
 ```
 
-## 支持的规则说明
+## rules
 
-自定义规则:
+- `common`: extends `eslint:recommended` and `plugin:prettier/recommended`
+- `vue`: extends `common` rules with `plugin:vue/essential`, `@vue/prettier`
+- `vue3`: extends `common` rules with `plugin:vue/vue3-essential`, `@vue/prettier`
+- `react`: extends `common` rules with `react-app`, `react-app/jest`
+- `node`: extends `common` rules
+
+custom rules:
 
 ```json
 {
@@ -78,8 +87,3 @@ npm install eslint-plugin-xyz --save-dev
   }
 }
 ```
-
-- `recommended`: 继承自 `eslint:recommended` 和 `plugin:prettier/recommended` 加上上面的自定义规则
-- `vue`: 继承自 `plugin:vue/essential`, `eslint:recommended`, `@vue/prettier` 和 `plugin:prettier/recommended` 加上上面的自定义规则
-- `react`: 继承自 `eslint:recommended`, `react-app`, `react-app/jest` 和 `plugin:prettier/recommended`加上上面的自定义规则
-- `node`: 继承自 `eslint:recommended` 和 `plugin:prettier/recommended`加上上面的自定义规则
