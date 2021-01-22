@@ -1,12 +1,14 @@
 {
   "name": "eslint-plugin-xyz",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "xyz rules",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin",
     "prettier",
+    "vue",
+    "react",
     "xyz",
     "xyz rules"
   ],
@@ -19,13 +21,8 @@
     "type": "git",
     "url": "http://codeio.dftoutiao.com/npm/eslint-plugin-xyz.git"
   },
-  "dependencies": {
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^1.19.1"
+  "peerDependencies": {
+    "eslint": "^6.8.0 || ^7.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
