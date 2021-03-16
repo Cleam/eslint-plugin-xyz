@@ -1,22 +1,22 @@
 # eslint-plugin-xyz
 
-A general eslint plugin with [prettier](https://prettier.io/). It can help you unify the code style and can be used in `common`, `node`, `vue`, `react` project.
+一个统一的代码规范集合 eslint 插件，可以用于一般项目以及 vue、react、node 项目。
 
-[简体中文文档](./CN.md)
+## 安装
 
-## install
-
-install [ESLint](http://eslint.org) and `eslint-plugin-xyz`:
+首先，安装 [ESLint](http://eslint.org) 和 `eslint-plugin-xyz`:
 
 ```bash
 npm install --save-dev eslint eslint-plugin-xyz
 ```
 
-**Note:** you must install `eslint-plugin-xyz` globally, If you install `eslint` globally (using the `-g` parameter).
+**注意:** 如果你全局安装了`eslint` (使用 `-g` 参数) 那么也必须全局安装 `eslint-plugin-xyz`.
 
-## usage
+## 使用
 
-for `common` project:
+将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
+
+一般项目的使用：:
 
 ```json
 {
@@ -25,7 +25,7 @@ for `common` project:
 }
 ```
 
-for `vue` project: ()
+`vue`项目的使用:
 
 ```json
 {
@@ -38,7 +38,7 @@ for `vue` project: ()
 npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
 ```
 
-for `vue3` project: ()
+`vue3`项目的使用:
 
 ```json
 {
@@ -51,7 +51,7 @@ for `vue3` project: ()
 npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
 ```
 
-for `react` project:
+`react`项目的使用:
 
 ```json
 {
@@ -64,7 +64,7 @@ for `react` project:
 npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
 ```
 
-for `node` project:
+`node`项目的使用:
 
 ```json
 {
@@ -73,15 +73,15 @@ for `node` project:
 }
 ```
 
-## rules
+## 支持的规则说明
 
-- `common`: extends `eslint:recommended` and `plugin:prettier/recommended`
-- `vue`: extends `common` rules with `plugin:vue/essential`, `@vue/prettier`
-- `vue3`: extends `common` rules with `plugin:vue/vue3-essential`, `@vue/prettier`
-- `react`: extends `common` rules with `react-app`, `react-app/jest`
-- `node`: extends `common` rules
+- `common`: 继承自`eslint:recommended` 和 `plugin:prettier/recommended`
+- `vue`: 继承自`common` rules 以及 `plugin:vue/essential`, `@vue/prettier`
+- `vue3`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/prettier`
+- `react`: 继承自`common` rules 以及 `react-app`, `react-app/jest`
+- `node`: 继承自`common` rules
 
-custom rules:
+自定义规则:
 
 ```json
 {
