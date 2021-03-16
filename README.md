@@ -2,7 +2,7 @@
 
 A general eslint plugin with [prettier](https://prettier.io/). It can help you unify the code style and can be used in `common`, `node`, `vue`, `react` project.
 
-[简体中文文档](./README.cn.md)
+[简体中文文档](./CN.md)
 
 ## install
 
