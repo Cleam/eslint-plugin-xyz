@@ -30,7 +30,7 @@ npm install --save-dev eslint eslint-plugin-xyz
 1. 安装
 
 ```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript
 ```
 
 2. 引入配置
