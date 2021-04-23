@@ -16,7 +16,7 @@ npm install --save-dev eslint eslint-plugin-xyz
 
 将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
 
-一般项目的使用：:
+### 普通项目使用
 
 ```json
 {
@@ -25,7 +25,17 @@ npm install --save-dev eslint eslint-plugin-xyz
 }
 ```
 
-`vue`项目的使用:
+### vue 项目使用
+
+1. 安装
+
+```bash
+npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+```
+
+2. 引入配置
+
+`vue2`:
 
 ```json
 {
@@ -34,11 +44,7 @@ npm install --save-dev eslint eslint-plugin-xyz
 }
 ```
 
-```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
-```
-
-`vue3`项目的使用:
+`vue3`:
 
 ```json
 {
@@ -47,11 +53,24 @@ npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
 }
 ```
 
-```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+`vue3 + ts`:
+
+```json
+{
+  "plugins": ["xyz"],
+  "extends": ["plugin:xyz/vue3_ts"]
+}
 ```
 
-`react`项目的使用:
+### react 项目的使用
+
+1. 安装
+
+```bash
+npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
+```
+
+2. 引入配置
 
 ```json
 {
@@ -60,11 +79,7 @@ npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
 }
 ```
 
-```bash
-npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
-```
-
-`node`项目的使用:
+### node 项目的使用
 
 ```json
 {
@@ -78,10 +93,11 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 - `common`: 继承自`eslint:recommended` 和 `plugin:prettier/recommended`
 - `vue`: 继承自`common` rules 以及 `plugin:vue/essential`, `@vue/prettier`
 - `vue3`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/prettier`
+- `vue3_ts`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/prettier`
 - `react`: 继承自`common` rules 以及 `react-app`, `react-app/jest`
 - `node`: 继承自`common` rules
 
-自定义规则:
+一些自定义规则:
 
 ```json
 {
