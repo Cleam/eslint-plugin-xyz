@@ -18,6 +18,14 @@ npm install --save-dev eslint eslint-plugin-xyz
 
 ### 普通项目使用
 
+1. 安装
+
+```bash
+npm install --save-dev @babel/eslint-parser
+```
+
+2. 引入配置
+
 ```json
 {
   "plugins": ["xyz"],
@@ -30,7 +38,7 @@ npm install --save-dev eslint eslint-plugin-xyz
 1. 安装
 
 ```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript
+npm install --save-dev @babel/eslint-parser eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript
 ```
 
 2. 引入配置
@@ -80,6 +88,14 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 ```
 
 ### node 项目的使用
+
+1. 安装
+
+```bash
+npm install --save-dev @babel/eslint-parser
+```
+
+2. 引入配置
 
 ```json
 {
