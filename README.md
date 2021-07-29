@@ -10,6 +10,8 @@
 npm install --save-dev eslint @babel/core @babel/eslint-parser eslint-plugin-xyz
 ```
 
+**注意**：如果碰到安装错误`Could not resolve dependency: peer eslint@">=7.x.x" ...`时，可以尝试加参数`--legacy-peer-deps`安装。
+
 ## 使用
 
 将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
