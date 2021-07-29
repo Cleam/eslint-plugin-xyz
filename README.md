@@ -4,13 +4,11 @@
 
 ## 安装
 
-首先，安装 [ESLint](http://eslint.org) 、`eslint-plugin-xyz`和`@babel/eslint-parser`:
+首先，安装[ESLint](http://eslint.org)和`eslint-plugin-xyz`等依赖:
 
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz @babel/eslint-parser
+npm install --save-dev eslint @babel/core @babel/eslint-parser eslint-plugin-xyz
 ```
-
-**注意:** 如果你全局安装了`eslint` (使用 `-g` 参数) 那么也必须全局安装 `eslint-plugin-xyz`.
 
 ## 使用
 
