@@ -97,7 +97,7 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 - `react`: 继承自`common` rules 以及 `react-app`, `react-app/jest`
 - `node`: 继承自`common` rules
 
-一些自定义规则:
+一些内置的默认自定义规则:
 
 ```json
 {
@@ -108,9 +108,17 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
         "singleQuote": true,
         "printWidth": 100,
         "tabWidth": 2,
-        "semi": true
+        "semi": true,
+        "overrides": [
+          {
+            "files": "*.css",
+            "options": { "singleQuote": false }
+          }
+        ]
       }
     ],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
     "no-console": "off"
   }
 }
