@@ -6,6 +6,7 @@
 
 ```bash
 npm install --save-dev eslint eslint-plugin-xyz
+npm install --save-dev --save-exact prettier
 ```
 
 **注意**：如果碰到安装错误`Could not resolve dependency: peer eslint@">=7.x.x" ...`时，可以尝试加参数`--legacy-peer-deps`安装。
