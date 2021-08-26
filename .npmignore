@@ -1,2 +1,4 @@
 tests
 .history
+.eslintrc.js
+.prettierrc.js

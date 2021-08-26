@@ -5,9 +5,9 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
-      extends: [ 'eslint:recommended', 'plugin:prettier/recommended' ],
+      extends: ['eslint:recommended', 'plugin:prettier/recommended'],
       rules: {
         'prettier/prettier': [
           'error',
@@ -18,43 +18,43 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
+        'no-console': 'off',
+      },
     },
     vue: {
       env: { browser: true, node: true, es6: true },
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
       extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
         'plugin:vue/essential',
-        '@vue/prettier'
+        '@vue/prettier',
       ],
       rules: {
         'prettier/prettier': [
@@ -66,43 +66,43 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
+        'no-console': 'off',
+      },
     },
     vue3: {
       env: { browser: true, node: true, es6: true },
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
       extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
         'plugin:vue/vue3-essential',
-        '@vue/prettier'
+        '@vue/prettier',
       ],
       rules: {
         'prettier/prettier': [
@@ -114,37 +114,37 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
+        'no-console': 'off',
+      },
     },
     vue3_ts: {
       env: { browser: true, node: true, es6: true },
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
       extends: [
         'eslint:recommended',
@@ -152,7 +152,7 @@ module.exports = {
         'plugin:vue/vue3-essential',
         '@vue/typescript/recommended',
         '@vue/prettier',
-        '@vue/prettier/@typescript-eslint'
+        '@vue/prettier/@typescript-eslint',
       ],
       rules: {
         'prettier/prettier': [
@@ -164,44 +164,39 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
+        'no-console': 'off',
+      },
     },
     react: {
       env: { browser: true, node: true, es6: true },
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
-      extends: [
-        'eslint:recommended',
-        'plugin:prettier/recommended',
-        'react-app',
-        'react-app/jest'
-      ],
+      extends: ['eslint:recommended', 'plugin:prettier/recommended', 'react-app', 'react-app/jest'],
       rules: {
         'prettier/prettier': [
           'error',
@@ -212,39 +207,39 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
+        'no-console': 'off',
+      },
     },
     node: {
       env: { browser: true, node: true, es6: true },
       parserOptions: {
         ecmaVersion: 2021,
         parser: '@babel/eslint-parser',
-        sourceType: 'module'
+        sourceType: 'module',
       },
-      extends: [ 'eslint:recommended', 'plugin:prettier/recommended' ],
+      extends: ['eslint:recommended', 'plugin:prettier/recommended'],
       rules: {
         'prettier/prettier': [
           'error',
@@ -255,30 +250,30 @@ module.exports = {
             tabWidth: 2,
             semi: true,
             overrides: [
-              { files: [ '*.md' ], options: { parser: 'markdown' } },
+              { files: ['*.md'], options: { parser: 'markdown' } },
               { files: '*.json', options: { parser: 'json' } },
               {
-                files: [ '*.css', '*.scss', '*.less' ],
-                options: { singleQuote: false }
+                files: ['*.css', '*.scss', '*.less'],
+                options: { singleQuote: false },
               },
               { files: '*.scss', options: { parser: 'scss' } },
               { files: '*.less', options: { parser: 'less' } },
               { files: '*.vue', options: { parser: 'vue' } },
               {
-                files: [ '*.js', '*.jsx' ],
-                options: { parser: 'babel' }
+                files: ['*.js', '*.jsx'],
+                options: { parser: 'babel' },
               },
               {
-                files: [ '*.ts', '*.tsx' ],
-                options: { parser: 'babel-ts' }
-              }
-            ]
-          }
+                files: ['*.ts', '*.tsx'],
+                options: { parser: 'babel-ts' },
+              },
+            ],
+          },
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
-        'no-console': 'off'
-      }
-    }
-  }
-}
+        'no-console': 'off',
+      },
+    },
+  },
+};
