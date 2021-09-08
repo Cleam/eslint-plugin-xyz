@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz
+npm install --save-dev eslint eslint-plugin-xyz @babel/{core,eslint-parser}
 npm install --save-dev --save-exact prettier
 ```
 
