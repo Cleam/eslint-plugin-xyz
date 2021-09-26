@@ -87,6 +87,90 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 }
 ```
 
+## 配置示例（vue2 项目）
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true,
+  plugins: ['xyz'],
+  extends: ['plugin:xyz/vue'],
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+  rules: {
+    'no-console': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
+  },
+};
+```
+
+```js
+// .prettierrc.js
+module.exports = {
+  printWidth: 100,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: true,
+  trailingComma: 'es5',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  arrowParens: 'always',
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  requirePragma: false,
+  insertPragma: false,
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
+  embeddedLanguageFormatting: 'auto',
+  overrides: [
+    {
+      files: ['*.md'],
+      options: { parser: 'markdown' },
+    },
+    {
+      files: '*.json',
+      options: { parser: 'json' },
+    },
+    {
+      files: ['*.css', '*.scss', '*.less'],
+      options: { singleQuote: false },
+    },
+    {
+      files: '*.scss',
+      options: { parser: 'scss' },
+    },
+    {
+      files: '*.less',
+      options: { parser: 'less' },
+    },
+    {
+      files: '*.vue',
+      options: { parser: 'vue' },
+    },
+    {
+      files: ['*.js', '*.jsx'],
+      options: { parser: 'babel' },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      options: { parser: 'babel-ts' },
+    },
+  ],
+};
+```
+
+> 可以自行根据业务需求，增加.eslintignore 和 .prettierignore 文件忽略掉不需要校验的文件。
+
+在`package.json`中配置`lint:js: "eslint --ext .js,.vue,.jsx,.tsx src --cache --cache-location \"./node_modules/.cache/.eslintcache\""`
+
+> 参考学习：[eslint](https://eslint.org/)、[prettier](https://prettier.io/)
+
 ## 支持的规则说明
 
 - `common`: 继承自`eslint:recommended` 和 `plugin:prettier/recommended`
@@ -96,63 +180,6 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 - `react`: 继承自`common` rules 以及 `react-app`, `react-app/jest`
 - `node`: 继承自`common` rules
 
-一些内置的默认自定义规则:
+## 说明
 
-```json
-{
-  "printWidth": 100,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowParens": "always",
-  "rangeStart": 0,
-  "rangeEnd": Infinity,
-  "requirePragma": false,
-  "insertPragma": false,
-  "proseWrap": "preserve",
-  "htmlWhitespaceSensitivity": "css",
-  "vueIndentScriptAndStyle": false,
-  "endOfLine": "lf",
-  "embeddedLanguageFormatting": "auto",
-  "overrides": [
-    {
-      "files": ["*.md"],
-      "options": { "parser": "markdown" }
-    },
-    {
-      "files": "*.json",
-      "options": { "parser": "json" }
-    },
-    {
-      "files": ["*.css", "*.scss", "*.less"],
-      "options": { "singleQuote": false }
-    },
-    {
-      "files": "*.scss",
-      "options": { "parser": "scss" }
-    },
-    {
-      "files": "*.less",
-      "options": { "parser": "less" }
-    },
-    {
-      "files": "*.vue",
-      "options": { "parser": "vue" }
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "options": { "parser": "babel" }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "options": { "parser": "babel-ts" }
-    }
-  ]
-}
-```
+目前只有 react 项目和 ts 项目实践较少，所以难免会有一些问题，本插件也会不定期更新。
