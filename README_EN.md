@@ -1,16 +1,20 @@
 # eslint-plugin-xyz
 
+[简体中文文档](./CN.md)
+
 A general eslint plugin with [prettier](https://prettier.io/). It can help you unify the code style and can be used in `common`, `node`, `vue`, `react` project.
 
-[简体中文文档](./CN.md)
 
 ## install
 
-install [ESLint](http://eslint.org) and `eslint-plugin-xyz`:
+install [ESLint](http://eslint.org), `eslint-plugin-xyz` and `prettier`:
 
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz
+npm install --save-dev eslint eslint-plugin-xyz prettier
 ```
+
+for `js` project: `npm i --save-dev @babel/{core,eslint-parser}`
+for `ts` project: `npm i --save-dev typescript @typescript-eslint/parser`
 
 **Note:** you must install `eslint-plugin-xyz` globally, If you install `eslint` globally (using the `-g` parameter).
 
@@ -25,7 +29,7 @@ for `common` project:
 }
 ```
 
-for `vue` project: ()
+for `vue` project:
 
 ```json
 {

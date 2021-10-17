@@ -1,12 +1,13 @@
 # eslint-plugin-xyz
 
+[English Doc](./README_EN.md)
+
 一个统一的代码规范集合 eslint 插件，可以用于一般项目以及 vue、react、node 项目。
 
 ## 安装
 
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz @babel/{core,eslint-parser}
-npm install --save-dev --save-exact prettier
+npm install --save-dev eslint eslint-plugin-xyz prettier
 ```
 
 **注意**：如果碰到安装错误`Could not resolve dependency: peer eslint@">=7.x.x" ...`时，可以尝试加参数`--legacy-peer-deps`安装。
@@ -17,6 +18,10 @@ npm install --save-dev --save-exact prettier
 
 ### 普通项目使用
 
+```sh
+npm i --save-dev @babel/{core,eslint-parser}
+```
+
 ```json
 {
   "plugins": ["xyz"],
@@ -26,13 +31,9 @@ npm install --save-dev --save-exact prettier
 
 ### vue 项目使用
 
-- 安装
-
 ```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-prettier
+npm install --save-dev @babel/{core,eslint-parser} eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-prettier
 ```
-
-- 引入配置
 
 `vue2`:
 
@@ -52,7 +53,11 @@ npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint
 }
 ```
 
-`vue3 + ts`:
+### vue3+ts项目
+
+```sh
+npm i --save-dev typescript @typescript-eslint/parser
+```
 
 ```json
 {
@@ -63,13 +68,9 @@ npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint
 
 ### react 项目的使用
 
-- 安装
-
 ```bash
-npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
+npm i --save-dev @babel/{core,eslint-parser} eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
 ```
-
-- 引入配置
 
 ```json
 {
@@ -79,6 +80,10 @@ npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@
 ```
 
 ### node 项目的使用
+
+```sh
+npm i --save-dev @babel/{core,eslint-parser}
+```
 
 ```json
 {
