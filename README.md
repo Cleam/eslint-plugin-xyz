@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz prettier
+npm install --save-dev eslint eslint-plugin-xyz prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
 **注意**：如果碰到安装错误`Could not resolve dependency: peer eslint@">=7.x.x" ...`时，可以尝试加参数`--legacy-peer-deps`安装。
@@ -32,7 +32,7 @@ npm i --save-dev @babel/{core,eslint-parser}
 ### vue 项目使用
 
 ```bash
-npm install --save-dev @babel/{core,eslint-parser} eslint-plugin-vue @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-prettier
+npm install --save-dev @babel/{core,eslint-parser} eslint-plugin-vue @vue/eslint-config-prettier
 ```
 
 `vue2`:
@@ -53,10 +53,10 @@ npm install --save-dev @babel/{core,eslint-parser} eslint-plugin-vue @vue/eslint
 }
 ```
 
-### vue3+ts项目
+### vue3+ts 项目
 
 ```sh
-npm i --save-dev typescript @typescript-eslint/parser
+npm i --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin @vue/eslint-config-typescript @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-vue
 ```
 
 ```json
@@ -66,10 +66,10 @@ npm i --save-dev typescript @typescript-eslint/parser
 }
 ```
 
-### react 项目的使用
+### react+ts 项目的使用
 
 ```bash
-npm i --save-dev @babel/{core,eslint-parser} eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
+npm i --save-dev typescript eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
 ```
 
 ```json
@@ -181,10 +181,10 @@ module.exports = {
 - `common`: 继承自`eslint:recommended` 和 `plugin:prettier/recommended`
 - `vue`: 继承自`common` rules 以及 `plugin:vue/essential`, `@vue/prettier`
 - `vue3`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/prettier`
-- `vue3_ts`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/prettier`
+- `vue3_ts`: 继承自`common` rules 以及 `plugin:vue/vue3-essential`, `@vue/typescript/recommended`, `@vue/prettier/@typescript-eslint`, `@vue/prettier`
 - `react`: 继承自`common` rules 以及 `react-app`, `react-app/jest`
 - `node`: 继承自`common` rules
 
 ## 说明
 
-目前只有 react 项目和 ts 项目实践较少，所以难免会有一些问题，本插件也会不定期更新。
+目前 react 项目和 ts 项目实践较少，所以难免会有一些问题，本插件也会不定期更新。
