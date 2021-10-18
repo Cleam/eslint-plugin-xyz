@@ -100,9 +100,6 @@ module.exports = {
   root: true,
   plugins: ['xyz'],
   extends: ['plugin:xyz/vue'],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
   rules: {
     'no-console': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
