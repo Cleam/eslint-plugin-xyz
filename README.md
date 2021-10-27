@@ -69,7 +69,7 @@ npm i --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-
 ### react+ts 项目的使用
 
 ```bash
-npm i --save-dev typescript eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
+npm i --save-dev typescript eslint-config-react-app @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ```json
