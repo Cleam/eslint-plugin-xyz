@@ -167,11 +167,11 @@ module.exports = {
 };
 ```
 
-> 可以自行根据业务需求，增加.eslintignore 和 .prettierignore 文件忽略掉不需要校验的文件。
+> You can add `.eslintignore` and `.prettierignore `files to ignore files that do not need to be verified according to business needs.
 
-在`package.json`中配置`lint:js: "eslint --ext .js,.vue,.jsx,.tsx src --cache --cache-location \"./node_modules/.cache/.eslintcache\""`
+add `lint:js: "eslint --ext .js,.vue,.jsx,.tsx src --cache --cache-location \"./node_modules/.cache/.eslintcache\""` in `package.json`.
 
-> 参考学习：[eslint](https://eslint.org/)、[prettier](https://prettier.io/)
+> Reference：[eslint](https://eslint.org/)、[prettier](https://prettier.io/)
 
 ## rules description
 
