@@ -1,26 +1,26 @@
 # eslint-plugin-xyz
 
-[简体中文文档](./CN.md)
+[中文](./README.md) | English
 
-A general eslint plugin with [prettier](https://prettier.io/). It can help you unify the code style and can be used in `common`, `node`, `vue`, `react` project.
-
+A unified code specification collection that is a eslint plug-in can be used for vanilla, vue, react, and node projects.
 
 ## install
 
-install [ESLint](http://eslint.org), `eslint-plugin-xyz` and `prettier`:
-
 ```bash
-npm install --save-dev eslint eslint-plugin-xyz prettier
+npm install --save-dev eslint eslint-plugin-xyz prettier eslint-plugin-prettier eslint-config-prettier
 ```
 
-for `js` project: `npm i --save-dev @babel/{core,eslint-parser}`
-for `ts` project: `npm i --save-dev typescript @typescript-eslint/parser`
-
-**Note:** you must install `eslint-plugin-xyz` globally, If you install `eslint` globally (using the `-g` parameter).
+**Notice**：Try to use `--legacy-peer-deps` when `npm >= 7`, or you find an error like `Could not resolve dependency: peer eslint@">=7.x.x" ...`。
 
 ## usage
 
-for `common` project:
+将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
+
+### for vanilla project
+
+```sh
+npm i --save-dev @babel/{core,eslint-parser}
+```
 
 ```json
 {
@@ -29,7 +29,13 @@ for `common` project:
 }
 ```
 
-for `vue` project:
+### for vue project
+
+```bash
+npm install --save-dev @babel/{core,eslint-parser} eslint-plugin-vue @vue/eslint-config-prettier
+```
+
+`vue2`:
 
 ```json
 {
@@ -38,11 +44,7 @@ for `vue` project:
 }
 ```
 
-```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
-```
-
-for `vue3` project: ()
+`vue3`:
 
 ```json
 {
@@ -51,11 +53,24 @@ for `vue3` project: ()
 }
 ```
 
-```bash
-npm install --save-dev eslint-plugin-vue @vue/eslint-config-prettier
+### for vue3 and ts project
+
+```sh
+npm i --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin @vue/eslint-config-typescript @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-vue
 ```
 
-for `react` project:
+```json
+{
+  "plugins": ["xyz"],
+  "extends": ["plugin:xyz/vue3_ts"]
+}
+```
+
+### for react and ts project
+
+```bash
+npm i --save-dev typescript eslint-config-react-app @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks babel-eslint
+```
 
 ```json
 {
@@ -64,11 +79,11 @@ for `react` project:
 }
 ```
 
-```bash
-npm install --save-dev eslint-config-react-app @typescript-eslint/eslint-plugin@^4.0.0 @typescript-eslint/parser@^4.0.0 babel-eslint@^10.0.0 eslint@^7.5.0 eslint-plugin-flowtype@^5.2.0 eslint-plugin-import@^2.22.0 eslint-plugin-jsx-a11y@^6.3.1 eslint-plugin-react@^7.20.3 eslint-plugin-react-hooks@^4.0.8
-```
+### for node project
 
-for `node` project:
+```sh
+npm i --save-dev @babel/{core,eslint-parser}
+```
 
 ```json
 {
@@ -77,29 +92,96 @@ for `node` project:
 }
 ```
 
-## rules
+## an usage example of vue 2 project
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true,
+  plugins: ['xyz'],
+  extends: ['plugin:xyz/vue'],
+  rules: {
+    'no-console': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.VUE_APP_ENV === 'production' ? 'warn' : 'off',
+  },
+};
+```
+
+```js
+// .prettierrc.js
+module.exports = {
+  printWidth: 100,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: true,
+  trailingComma: 'es5',
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: 'always',
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  requirePragma: false,
+  insertPragma: false,
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  endOfLine: 'lf',
+  embeddedLanguageFormatting: 'auto',
+  overrides: [
+    {
+      files: ['*.md'],
+      options: { parser: 'markdown' },
+    },
+    {
+      files: '*.json',
+      options: { parser: 'json' },
+    },
+    {
+      files: ['*.css', '*.scss', '*.less'],
+      options: { singleQuote: false },
+    },
+    {
+      files: '*.scss',
+      options: { parser: 'scss' },
+    },
+    {
+      files: '*.less',
+      options: { parser: 'less' },
+    },
+    {
+      files: '*.vue',
+      options: { parser: 'vue' },
+    },
+    {
+      files: ['*.js', '*.jsx'],
+      options: { parser: 'babel' },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      options: { parser: 'babel-ts' },
+    },
+  ],
+};
+```
+
+> 可以自行根据业务需求，增加.eslintignore 和 .prettierignore 文件忽略掉不需要校验的文件。
+
+在`package.json`中配置`lint:js: "eslint --ext .js,.vue,.jsx,.tsx src --cache --cache-location \"./node_modules/.cache/.eslintcache\""`
+
+> 参考学习：[eslint](https://eslint.org/)、[prettier](https://prettier.io/)
+
+## rules description
 
 - `common`: extends `eslint:recommended` and `plugin:prettier/recommended`
-- `vue`: extends `common` rules with `plugin:vue/essential`, `@vue/prettier`
-- `vue3`: extends `common` rules with `plugin:vue/vue3-essential`, `@vue/prettier`
-- `react`: extends `common` rules with `react-app`, `react-app/jest`
+- `vue`: extends `common` rules and `plugin:vue/essential`, `@vue/prettier`
+- `vue3`: extends `common` rules and `plugin:vue/vue3-essential`, `@vue/prettier`
+- `vue3_ts`: extends `common` rules and `plugin:vue/vue3-essential`, `@vue/typescript/recommended`, `@vue/prettier/@typescript-eslint`, `@vue/prettier`
+- `react`: extends `common` rules and `react-app`, `react-app/jest`
 - `node`: extends `common` rules
 
-custom rules:
+## illustrate
 
-```json
-{
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "printWidth": 100,
-        "tabWidth": 2,
-        "semi": true
-      }
-    ],
-    "no-console": "off"
-  }
-}
-```
+This plugin will always be maintained. Welcome to discuss.

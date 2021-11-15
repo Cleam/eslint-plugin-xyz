@@ -1,6 +1,6 @@
 # eslint-plugin-xyz
 
-[English Doc](./README_EN.md)
+中文 | [English](./README_EN.md)
 
 一个统一的代码规范集合 eslint 插件，可以用于一般项目以及 vue、react、node 项目。
 
@@ -119,7 +119,7 @@ module.exports = {
   jsxSingleQuote: true,
   trailingComma: 'es5',
   bracketSpacing: true,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   arrowParens: 'always',
   rangeStart: 0,
   rangeEnd: Infinity,
