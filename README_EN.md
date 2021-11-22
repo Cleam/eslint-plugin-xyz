@@ -14,7 +14,7 @@ npm install --save-dev eslint eslint-plugin-xyz prettier eslint-plugin-prettier 
 
 ## usage
 
-将 `xyz` 添加到 `.eslintrc` 配置文件.可以省略 `eslint-plugin-` 前缀:
+Add `xyz` to the `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix.
 
 ### for vanilla project
 

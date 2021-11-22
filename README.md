@@ -1,6 +1,6 @@
 # eslint-plugin-xyz
 
-中文 | [English](./README_EN.md)
+中文 | [English](https://github.com/Cleam/eslint-plugin-xyz/blob/master/README_EN.md)
 
 一个统一的代码规范集合 eslint 插件，可以用于一般项目以及 vue、react、node 项目。
 
